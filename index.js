@@ -7,7 +7,7 @@ const { app, BrowserWindow } = electron;
 function createWindow() {
   // Create the browser window
   const win = new BrowserWindow({
-    width: 800,
+    width: 200,
     height: 600,
     webPreferences: {
       nodeIntegration: true,
@@ -17,6 +17,20 @@ function createWindow() {
   // and load the main html file of the app
   win.loadFile("index.html");
 }
+
+/*var child = require("child_process").execFile;
+var executablePath =
+  app.getPath("appData").replace("\\Roaming", "") +
+  "\\Local\\LilySpeechApp\\LilySpeech\\assets\\engine\\LilySpeech64-1.exe";
+
+child(executablePath, function (err, data) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  console.log(data.toString());
+});*/
 
 app.whenReady().then(createWindow);
 
