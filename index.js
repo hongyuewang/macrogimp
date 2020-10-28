@@ -13,6 +13,7 @@ function createWindow() {
       nodeIntegration: true,
     },
   });
+  win.setAlwaysOnTop(true, "screen");
 
   // and load the main html file of the app
   win.loadFile("index.html");
