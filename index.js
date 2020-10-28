@@ -7,8 +7,8 @@ const { app, BrowserWindow } = electron;
 function createWindow() {
   // Create the browser window
   const win = new BrowserWindow({
-    width: 200,
-    height: 600,
+    width: 300,
+    height: 400,
     webPreferences: {
       nodeIntegration: true,
     },
