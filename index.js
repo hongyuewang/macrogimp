@@ -3,12 +3,21 @@ const url = require("url");
 const path = require("path");
 
 const { app, BrowserWindow } = electron;
+const screenElectron = electron.screen;
 
 function createWindow() {
   // Create the browser window
+  const mainScreen = screenElectron.getPrimaryDisplay();
+  const dimensions = mainScreen.size;
+  const screenWidth = dimensions.width;
+  const screenHeight = dimensions.height;
+
+  console.log(screenWidth);
+  console.log(screenHeight);
   const win = new BrowserWindow({
-    width: 300,
-    height: 400,
+
+    width: Math.round(screenWidth * 0.21),
+    height: Math.round(screenHeight * 0.41),
     x:-10,
     y:50,
     webPreferences: {
