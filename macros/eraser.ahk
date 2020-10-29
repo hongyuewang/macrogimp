@@ -1,2 +1,3 @@
-﻿Click, 600, -100
+﻿CoordMode, Mouse, Screen
+Click, 600, -100
 send, +{e}
