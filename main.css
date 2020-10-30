@@ -18,6 +18,50 @@ body {
   background-size: 100% 100%;
 }
 
+.airbrush {
+  background-image: url(Color/scalable/apps/gimp-tool-airbrush.svg);
+  width: 60px;
+  height: 60px;
+  background-size: 100% 100%;
+}
+
+.eraser {
+  background-image: url(Color/scalable/apps/gimp-tool-eraser.svg);
+  width: 60px;
+  height: 60px;
+  background-size: 100% 100%;
+}
+
+.bucket-fill {
+  background-image: url(Color/scalable/apps/gimp-tool-bucket-fill.svg);
+  width: 60px;
+  height: 60px;
+  background-size: 100% 100%;
+}
+
+.ink {
+  background-image: url(Color/scalable/apps/gimp-tool-ink.svg);
+  width: 60px;
+  height: 60px;
+  background-size: 100% 100%;
+}
+
+.crop {
+  background-image: url(Color/scalable/apps/gimp-tool-crop.svg);
+  width: 60px;
+  height: 60px;
+  background-size: 100% 100%;
+}
+
+.changeColor {
+  background-image: url(icons/changeColor.png);
+  width: 60px;
+  height: 60px;
+  background-size: 100% 100%;
+}
+
+
+
 /*.increase-brush-size {
   background-image: url(icons/IncreaseBrushSize.PNG);
   width: 50px;
