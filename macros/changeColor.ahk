@@ -11,6 +11,5 @@ Ymax := Ymin + VirtualScreenHeight
 x := Round(Xmax * 0.03)
 y := Round(Ymax * 0.490)
 
-Sleep 3000
 CoordMode, Mouse, Screen
 Click %x%, %y%  ;65, 530
