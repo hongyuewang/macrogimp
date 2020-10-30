@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <link rel="stylesheet" type="text/css" href="main.css">
-  <script src="macro.js"></script>
-</head>
-<body>
-    <button class="paintbrush" onclick="openPaint()"></button>
-    <BUTTON class="decrease-brush-size"></BUTTON>
-    <BUTTON class="click"></BUTTON>
-    <BUTTON class="line"></BUTTON>
-    <BUTTON class="oval"></BUTTON>
-    <BUTTON class="text"></BUTTON>
-    <BUTTON class="color"></BUTTON>
+  <head>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script src="macro.js"></script>
+  </head>
+  <body>
+    <button class="paintbrush" onclick="openMacro(this.className)"></button>
+    <button class="pencil" onclick="openMacro(this.className)"></button>
+    <button class="airbrush"></button>
+    <button class="eraser"></button>
+    <button class="bucket-fill"></button>
+    <button class="ink"></button>
+    <button class="crop"></button>
 
-<!--
+    <!--
     function goToURL(val){
     location.href = val;
     }
@@ -26,12 +26,5 @@
     <BUTTON ONCLICK="javascript:goToURL('some/url/index.html')">eraser</BUTTON>
     <BUTTON ONCLICK="javascript:goToURL('some/url/index.html')">change color</BUTTON>
 -->
-</body>
-
+  </body>
 </html>
-
-
-
-
-    
-    

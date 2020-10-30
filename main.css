@@ -11,6 +11,13 @@ body {
   background-size: 100% 100%;
 }
 
+.pencil {
+  background-image: url(Color/scalable/apps/gimp-tool-pencil.svg);
+  width: 60px;
+  height: 60px;
+  background-size: 100% 100%;
+}
+
 /*.increase-brush-size {
   background-image: url(icons/IncreaseBrushSize.PNG);
   width: 50px;
