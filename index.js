@@ -4,6 +4,7 @@ const path = require("path");
 
 const { app, BrowserWindow } = electron;
 const screenElectron = electron.screen;
+const { shell } = require('electron');
 
 function createWindow() {
   // Create the browser window
@@ -30,6 +31,9 @@ function createWindow() {
   win.loadFile("index.html");
 }
 
+function openSearchBar() {
+  shell.openPath( __dirname +  "\\macros\\search.ahk");
+}
 /*var child = require("child_process").execFile;
 var executablePath =
   app.getPath("appData").replace("\\Roaming", "") +
@@ -44,7 +48,7 @@ child(executablePath, function (err, data) {
   console.log(data.toString());
 });*/
 
-app.whenReady().then(createWindow);
+app.whenReady().then(createWindow).then(openSearchBar);
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
