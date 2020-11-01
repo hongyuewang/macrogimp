@@ -2,9 +2,17 @@ const electron = require("electron");
 const url = require("url");
 const path = require("path");
 
-const { app, BrowserWindow } = electron;
+const { app, BrowserWindow, session } = electron;
 const screenElectron = electron.screen;
-const { shell } = require('electron');
+const { shell } = require("electron");
+
+process.env.GOOGLE_API_KEY = "AIzaSyACQx7kQgtV15J_pPocYkfXMzybSWyi0rE";
+process.env.GOOGLE_DEFAULT_CLIENT_ID =
+  "743803874255-80hrq581c76aj80alhbeujn829lmudrp.apps.googleusercontent.com";
+process.env.GOOGLE_DEFAULT_CLIENT_SECRET = "HuaySQwKp0bQnNjbg4Cq7hht";
+
+let main;
+let voiceSearch;
 
 function createWindow() {
   // Create the browser window
@@ -15,24 +23,36 @@ function createWindow() {
 
   console.log(screenWidth);
   console.log(screenHeight);
-  const win = new BrowserWindow({
-
+  const main = new BrowserWindow({
     width: Math.round(screenWidth * 0.21),
     height: Math.round(screenHeight * 0.41),
-    x:-10,
-    y:50,
+    x: -10,
+    y: 50,
     webPreferences: {
       nodeIntegration: true,
     },
   });
-  win.setAlwaysOnTop(true, "screen");
+  main.setAlwaysOnTop(true, "screen");
 
   // and load the main html file of the app
-  win.loadFile("index.html");
+  main.loadFile("index.html");
+
+  const voiceSearch = new BrowserWindow({
+    parent: main,
+    width: Math.round(screenWidth * 0.21),
+    height: Math.round(screenHeight * 0.41),
+    x: 100,
+    y: 50,
+    webPreferences: {
+      nodeIntegration: true,
+    },
+  });
+
+  voiceSearch.loadFile("stt.html");
 }
 
 function openSearchBar() {
-  shell.openPath( __dirname +  "\\macros\\search.ahk");
+  shell.openPath(__dirname + "\\macros\\search.ahk");
 }
 /*var child = require("child_process").execFile;
 var executablePath =
@@ -49,6 +69,24 @@ child(executablePath, function (err, data) {
 });*/
 
 app.whenReady().then(createWindow).then(openSearchBar);
+
+app.on("ready", () => {
+  session
+    .fromPartition("default")
+    .setPermissionRequestHandler((webContents, permission, callback) => {
+      let allowedPermissions = ["audioCapture"]; // Full list here: https://developer.chrome.com/extensions/declare_permissions#manifest
+
+      if (allowedPermissions.includes(permission)) {
+        callback(true); // Approve permission request
+      } else {
+        console.error(
+          `The application tried to request permission for '${permission}'. This permission was not whitelisted and has been blocked.`
+        );
+
+        callback(false); // Deny
+      }
+    });
+});
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
