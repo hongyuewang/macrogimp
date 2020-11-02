@@ -5,6 +5,8 @@ const path = require("path");
 function openMacro(className) {
     shell.openPath( __dirname +  "\\macros\\" + className + ".ahk");
 
+    uLabel(className);
+
     notifier.notify(
       {
         title: "You have selected:",
@@ -25,4 +27,10 @@ function openMacro(className) {
       console.log("Notification timed out!");
     });
          
+}
+
+
+function uLabel(className) {
+  var x = document.getElementById("selectScreen");
+  x.innerHTML = className;
 }

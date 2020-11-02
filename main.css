@@ -61,46 +61,19 @@ body {
 }
 
 
-
-/*.increase-brush-size {
-  background-image: url(icons/IncreaseBrushSize.PNG);
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
+.typewriter {
+	color: #ffff99;
+  font-family: monospace;
+  overflow: hidden;  /*Ensures the content is not revealed until the animation*/
+  border-right: .15em solid orange; /* The typwriter cursor */
+  white-space: nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation:
+    typing 3.5s steps(30, end),
+    blink-caret .5s step-end infinite;
 }
-.decrease-brush-size {
-  background-image: url(icons/DecreaseBrushSize.PNG);
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
 }
-.click {
-  background-image: url(icons/Click.PNG);
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-}
-.line {
-  background-image: url(icons/Line.PNG);
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-}
-.oval {
-  background-image: url(icons/Oval.PNG);
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-}
-.text {
-  background-image: url(icons/Text.PNG);
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-}
-.color {
-  background-image: url(icons/Color.PNG);
-  width: 50px;
-  height: 50px;
-  background-repeat: no-repeat;
-}*/
