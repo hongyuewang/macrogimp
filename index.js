@@ -57,24 +57,6 @@ function openSearchBar() {
 
 app.whenReady().then(createWindow).then(openSearchBar);
 
-app.on("ready", () => {
-  session
-    .fromPartition("default")
-    .setPermissionRequestHandler((webContents, permission, callback) => {
-      let allowedPermissions = ["audioCapture"]; // Full list here: https://developer.chrome.com/extensions/declare_permissions#manifest
-
-      if (allowedPermissions.includes(permission)) {
-        callback(true); // Approve permission request
-      } else {
-        console.error(
-          `The application tried to request permission for '${permission}'. This permission was not whitelisted and has been blocked.`
-        );
-
-        callback(false); // Deny
-      }
-    });
-});
-
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") {
     app.quit();
