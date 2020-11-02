@@ -49,6 +49,7 @@ function createWindow() {
   });
 
   voiceSearch.loadFile("stt.html");
+}
 
 function openSearchBar() {
   shell.openPath(__dirname + "\\macros\\search.ahk");
