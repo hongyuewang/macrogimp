@@ -1,3 +1,5 @@
+const { shell } = require("electron");
+
 function runSpeechRecognition() {
   // Get the ouput div reference
   let output = document.getElementById("output");
@@ -24,15 +26,20 @@ function runSpeechRecognition() {
     var transcript = event.results[0][0].transcript;
     var confidence = event.results[0][0].confidence;
     output.innerHTML =
-      "<b>Text:</b> " +
-      transcript +
-      "<br/> <b>Confidence:</b> " +
-      confidence * 100 +
-      "%";
+      transcript;
     output.classList.remove("hide");
+
+    output.select();
+    output.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    pasteInSearchBar();
   };
 
   // start recognition
   recognition.start();
+}
+
+function pasteInSearchBar() {
+  shell.openPath(__dirname + "\\macros\\paste.ahk");
 }
 
