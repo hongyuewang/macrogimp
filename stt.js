@@ -11,11 +11,11 @@ function runSpeechRecognition() {
 
   // This runs when the speech recognition service starts
   recognition.onstart = function () {
-    action.innerHTML = "<small>listening, please speak...</small>";
+    action.innerHTML = "<small>Listening...</small>";
   };
 
   recognition.onspeechend = function () {
-    action.innerHTML = "<small>stopped listening, hope you are done...</small>";
+    action.innerHTML = "<small>Stopped listening.</small>";
     recognition.stop();
   };
 

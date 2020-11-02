@@ -2,7 +2,7 @@ const electron = require("electron");
 const url = require("url");
 const path = require("path");
 
-const { app, BrowserWindow, session } = electron;
+const { app, BrowserWindow, session, Notification } = electron;
 const screenElectron = electron.screen;
 const { shell } = require("electron");
 
@@ -39,9 +39,9 @@ function createWindow() {
 
   const voiceSearch = new BrowserWindow({
     parent: main,
-    width: Math.round(screenWidth * 0.21),
-    height: Math.round(screenHeight * 0.41),
-    x: 100,
+    width: Math.round(screenWidth * 0.18),
+    height: Math.round(screenHeight * 0.3),
+    x: 600,
     y: 50,
     webPreferences: {
       nodeIntegration: true,
@@ -49,24 +49,10 @@ function createWindow() {
   });
 
   voiceSearch.loadFile("stt.html");
-}
 
 function openSearchBar() {
   shell.openPath(__dirname + "\\macros\\search.ahk");
 }
-/*var child = require("child_process").execFile;
-var executablePath =
-  app.getPath("appData").replace("\\Roaming", "") +
-  "\\Local\\LilySpeechApp\\LilySpeech\\assets\\engine\\LilySpeech64-1.exe";
-
-child(executablePath, function (err, data) {
-  if (err) {
-    console.error(err);
-    return;
-  }
-
-  console.log(data.toString());
-});*/
 
 app.whenReady().then(createWindow).then(openSearchBar);
 
