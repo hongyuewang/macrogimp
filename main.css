@@ -32,7 +32,7 @@ body {
   background-size: 100% 100%;
 }
 
-.bucket-fill {
+.bucketFill {
   background-image: url(Color/scalable/apps/gimp-tool-bucket-fill.svg);
   width: 60px;
   height: 60px;
