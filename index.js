@@ -2,7 +2,7 @@ const electron = require("electron");
 const url = require("url");
 const path = require("path");
 
-const { app, BrowserWindow, session, Notification } = electron;
+const { app, BrowserWindow } = electron;
 const screenElectron = electron.screen;
 const { shell } = require("electron");
 
@@ -10,9 +10,6 @@ process.env.GOOGLE_API_KEY = "AIzaSyACQx7kQgtV15J_pPocYkfXMzybSWyi0rE";
 process.env.GOOGLE_DEFAULT_CLIENT_ID =
   "743803874255-80hrq581c76aj80alhbeujn829lmudrp.apps.googleusercontent.com";
 process.env.GOOGLE_DEFAULT_CLIENT_SECRET = "HuaySQwKp0bQnNjbg4Cq7hht";
-
-let main;
-let voiceSearch;
 
 function createWindow() {
   // Create the browser window
