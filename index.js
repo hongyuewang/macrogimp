@@ -1,7 +1,7 @@
 const electron = require("electron");
 const url = require("url");
 const path = require("path");
-const config = require("./config.js");
+const config = require("./config.json");
 
 const { app, BrowserWindow } = electron;
 const screenElectron = electron.screen;
@@ -33,6 +33,7 @@ function createWindow() {
 
   // and load the main html file of the app
   main.loadFile("index.html");
+  console.log(process.env.GOOGLE_API_KEY);
 
   const voiceSearch = new BrowserWindow({
     parent: main,
