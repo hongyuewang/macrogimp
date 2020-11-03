@@ -1,6 +1,7 @@
 const electron = require("electron");
 const url = require("url");
 const path = require("path");
+const config = require("./config.js");
 
 const { app, BrowserWindow } = electron;
 const screenElectron = electron.screen;
