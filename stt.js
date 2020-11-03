@@ -25,8 +25,7 @@ function runSpeechRecognition() {
   recognition.onresult = function (event) {
     var transcript = event.results[0][0].transcript;
     var confidence = event.results[0][0].confidence;
-    output.innerHTML =
-      transcript;
+    output.innerHTML = transcript;
     output.classList.remove("hide");
 
     output.select();
@@ -42,4 +41,3 @@ function runSpeechRecognition() {
 function pasteInSearchBar() {
   shell.openPath(__dirname + "\\macros\\paste.ahk");
 }
-

@@ -6,10 +6,9 @@ const { app, BrowserWindow } = electron;
 const screenElectron = electron.screen;
 const { shell } = require("electron");
 
-process.env.GOOGLE_API_KEY = "AIzaSyACQx7kQgtV15J_pPocYkfXMzybSWyi0rE";
-process.env.GOOGLE_DEFAULT_CLIENT_ID =
-  "743803874255-80hrq581c76aj80alhbeujn829lmudrp.apps.googleusercontent.com";
-process.env.GOOGLE_DEFAULT_CLIENT_SECRET = "HuaySQwKp0bQnNjbg4Cq7hht";
+process.env.GOOGLE_API_KEY = config.GOOGLE_API_KEY;
+process.env.GOOGLE_DEFAULT_CLIENT_ID = config.GOOGLE_DEFAULT_CLIENT_ID;
+process.env.GOOGLE_DEFAULT_CLIENT_SECRET = config.GOOGLE_DEFAULT_CLIENT_SECRET;
 
 function createWindow() {
   // Create the browser window
