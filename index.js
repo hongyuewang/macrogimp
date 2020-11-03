@@ -37,10 +37,10 @@ function createWindow() {
 
   const voiceSearch = new BrowserWindow({
     parent: main,
-    width: Math.round(screenWidth * 0.18),
-    height: Math.round(screenHeight * 0.3),
-    x: 600,
-    y: 50,
+    width: Math.round(screenWidth * 0.15),
+    height: Math.round(screenHeight * 0.2),
+    x: 750,
+    y: 0,
     webPreferences: {
       nodeIntegration: true,
     },
