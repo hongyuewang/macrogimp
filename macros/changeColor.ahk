@@ -8,8 +8,8 @@ SysGet, VirtualScreenHeight, 79
 Xmax := Xmin + VirtualScreenWidth
 Ymax := Ymin + VirtualScreenHeight
 
-x := Round(Xmax * 0.03)
-y := Round(Ymax * 0.490)
+x := Round(Xmax * 0.1)
+y := Round(Ymax * 0.47)
 
 CoordMode, Mouse, Screen
 Click %x%, %y%  ;65, 530

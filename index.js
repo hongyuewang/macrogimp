@@ -22,7 +22,7 @@ function createWindow() {
   console.log(screenHeight);
   const main = new BrowserWindow({
     width: Math.round(screenWidth * 0.21),
-    height: Math.round(screenHeight * 0.41),
+    height: Math.round(screenHeight * 0.39),
     x: -10,
     y: 50,
     webPreferences: {
