@@ -3,7 +3,7 @@ const notifier = require("node-notifier");
 const path = require("path");
 
 function openMacro(className) {
-  shell.openPath(__dirname + "\\macros\\" + className + ".ahk");
+  shell.openPath(__dirname + "\\macros\\" + className + ".exe");
 
   notifier.notify(
     {

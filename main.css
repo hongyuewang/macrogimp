@@ -6,74 +6,96 @@ body {
 
 .paintbrush {
   background-image: url(Color/scalable/apps/gimp-tool-paintbrush.svg);
-  width: 60px;
-  height: 60px;
+  width: 57px;
+  height: 57px;
   background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
 }
 
 .pencil {
   background-image: url(Color/scalable/apps/gimp-tool-pencil.svg);
-  width: 60px;
-  height: 60px;
+  width: 57px;
+  height: 57px;
   background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
 }
 
 .airbrush {
   background-image: url(Color/scalable/apps/gimp-tool-airbrush.svg);
-  width: 60px;
-  height: 60px;
+  width: 57px;
+  height: 57px;
   background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(50deg);
 }
 
 .eraser {
   background-image: url(Color/scalable/apps/gimp-tool-eraser.svg);
-  width: 60px;
-  height: 60px;
+  width: 57px;
+  height: 57px;
   background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
 }
 
 .bucketFill {
   background-image: url(Color/scalable/apps/gimp-tool-bucket-fill.svg);
-  width: 60px;
-  height: 60px;
+  width: 57px;
+  height: 57px;
   background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
 }
 
 .ink {
   background-image: url(Color/scalable/apps/gimp-tool-ink.svg);
-  width: 60px;
-  height: 60px;
+  width: 57px;
+  height: 57px;
   background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
 }
 
 .crop {
   background-image: url(Color/scalable/apps/gimp-tool-crop.svg);
-  width: 60px;
-  height: 60px;
+  width: 57px;
+  height: 57px;
   background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
+}
+
+.smudge {
+  background-image: url(Color/scalable/apps/gimp-tool-smudge.svg);
+  width: 57px;
+  height: 57px;
+  background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
 }
 
 .changeColor {
   background-image: url(icons/changeColor.png);
-  width: 60px;
-  height: 60px;
+  width: 57px;
+  height: 57px;
   background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
 }
 
-
-.typewriter {
-	color: #ffff99;
-  font-family: monospace;
-  overflow: hidden;  /*Ensures the content is not revealed until the animation*/
-  border-right: .15em solid orange; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: .15em; /* Adjust as needed */
-  animation:
-    typing 3.5s steps(30, end),
-    blink-caret .5s step-end infinite;
+.move {
+  background-image: url(Color/scalable/apps/gimp-tool-move.svg);
+  width: 57px;
+  height: 57px;
+  background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
 }
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+
+.text {
+  background-image: url(Color/scalable/apps/gimp-tool-text.svg);
+  width: 57px;
+  height: 57px;
+  background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
+}
+
+.transform {
+  background-image: url(Color/scalable/apps/gimp-tool-unified-transform.svg);
+  width: 57px;
+  height: 57px;
+  background-size: 100% 100%;
+  filter: saturate(50%) hue-rotate(25deg);
 }
