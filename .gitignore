@@ -105,3 +105,10 @@ dist
 
 # Config file
 config.json
+
+# Program files
+macrogimp-win32-x64
+
+# setup .exe
+macrogimp-setup.exe
+

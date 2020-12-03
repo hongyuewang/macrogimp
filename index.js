@@ -33,6 +33,7 @@ function createWindow() {
 
   // and load the main html file of the app
   main.loadFile("index.html");
+  main.removeMenu();
   console.log(process.env.GOOGLE_API_KEY);
 
   const voiceSearch = new BrowserWindow({
@@ -47,6 +48,7 @@ function createWindow() {
   });
 
   voiceSearch.loadFile("stt.html");
+  voiceSearch.removeMenu();
 }
 
 function openSearchBar() {
