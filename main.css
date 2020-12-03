@@ -1,5 +1,10 @@
 body {
   background-color: #282828;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
 
 /*template for buttons */
